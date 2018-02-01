@@ -11,9 +11,11 @@ import (
 )
 
 type Event struct {
-	Id    string
-	Name  string
-	Props map[string]string
+	Id              string
+	Name            string
+	Props           map[string]string
+	ServerTimestamp int64
+	ClientTimestamp int64
 }
 
 func DeserializeEvent(r io.Reader) (*Event, error) {
@@ -29,7 +31,7 @@ func NewEvent() *Event {
 }
 
 func (r *Event) Schema() string {
-	return "{\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"default\":{},\"name\":\"props\",\"type\":{\"type\":\"map\",\"values\":\"string\"}}],\"name\":\"Event\",\"namespace\":\"com.tfgco.eventsgateway\",\"type\":\"record\"}"
+	return "{\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"default\":{},\"name\":\"props\",\"type\":{\"type\":\"map\",\"values\":\"string\"}},{\"name\":\"serverTimestamp\",\"type\":\"long\"},{\"name\":\"clientTimestamp\",\"type\":\"long\"}],\"name\":\"Event\",\"namespace\":\"com.tfgco.eventsgateway\",\"type\":\"record\"}"
 }
 
 func (r *Event) Serialize(w io.Writer) error {

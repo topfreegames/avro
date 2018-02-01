@@ -18,6 +18,14 @@
 	  "type": "map",
 	  "values": "string"
       }
+    },
+    {
+      "name": "serverTimestamp",
+      "type": "long"
+    },
+    {
+      "name": "clientTimestamp",
+      "type": "long"
     }
   ]
 }

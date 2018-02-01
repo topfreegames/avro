@@ -82,6 +82,14 @@ func readEvent(r io.Reader) (*Event, error) {
 	if err != nil {
 		return nil, err
 	}
+	str.ServerTimestamp, err = readLong(r)
+	if err != nil {
+		return nil, err
+	}
+	str.ClientTimestamp, err = readLong(r)
+	if err != nil {
+		return nil, err
+	}
 
 	return str, nil
 }
@@ -166,6 +174,14 @@ func writeEvent(r *Event, w io.Writer) error {
 		return err
 	}
 	err = writeMapString(r.Props, w)
+	if err != nil {
+		return err
+	}
+	err = writeLong(r.ServerTimestamp, w)
+	if err != nil {
+		return err
+	}
+	err = writeLong(r.ClientTimestamp, w)
 	if err != nil {
 		return err
 	}

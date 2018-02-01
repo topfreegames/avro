@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"time"
 
 	avro "github.com/topfreegames/avro/eventsgateway/generated"
 )
@@ -16,6 +17,8 @@ func main() {
 		"prop1": "val1",
 		"prop2": "val2",
 	}
+	event.ClientTimestamp = time.Now().Unix()
+	event.ServerTimestamp = time.Now().Unix()
 
 	// Serialize the struct to a byte buffer
 	var buf bytes.Buffer
