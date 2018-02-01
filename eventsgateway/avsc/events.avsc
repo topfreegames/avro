@@ -1,0 +1,23 @@
+{
+  "namespace": "com.tfgco.eventsgateway",
+  "type": "record",
+  "name": "Event",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "props",
+      "default": {},
+      "type": {
+	  "type": "map",
+	  "values": "string"
+      }
+    }
+  ]
+}
