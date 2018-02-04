@@ -5,12 +5,6 @@ This package contains the common .avsc files and related generated code we use i
 
 
 ### Changelog
-
-#### v1.0.2
-
-* Events Gateway
-  * Add java project.
-
 #### v1.0.1
 
 * Events Gateway
