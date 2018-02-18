@@ -1,0 +1,35 @@
+{
+  "namespace": "com.tfgco.pushnotification",
+  "type": "record",
+  "name": "PushNotification",
+  "fields": [
+    {
+      "name": "push_expiry",
+      "type": "long"
+    },
+    {
+      "name": "metadata",
+      "default": {},
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "data",
+      "default": {},
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "token",
+      "type": "string"
+    },
+    {
+      "name": "dry_run",
+      "type": "boolean"
+    }
+  ]
+}
