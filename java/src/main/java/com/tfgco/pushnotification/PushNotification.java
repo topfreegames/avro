@@ -11,7 +11,7 @@ import org.apache.avro.specific.SpecificData;
 @org.apache.avro.specific.AvroGenerated
 public class PushNotification extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = -2314721379987503542L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PushNotification\",\"namespace\":\"com.tfgco.pushnotification\",\"fields\":[{\"name\":\"push_expiry\",\"type\":\"long\"},{\"name\":\"metadata\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":{}},{\"name\":\"data\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":{}},{\"name\":\"token\",\"type\":\"string\"},{\"name\":\"dry_run\",\"type\":\"boolean\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PushNotification\",\"namespace\":\"com.tfgco.pushnotification\",\"fields\":[{\"name\":\"push_expiry\",\"type\":\"long\",\"default\":0},{\"name\":\"metadata\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":{}},{\"name\":\"data\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":{}},{\"name\":\"token\",\"type\":\"string\"},{\"name\":\"dry_run\",\"type\":\"boolean\",\"default\":false}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public long push_expiry;
   @Deprecated public java.util.Map<java.lang.CharSequence,java.lang.CharSequence> metadata;

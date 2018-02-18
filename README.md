@@ -6,6 +6,11 @@ This package contains the common .avsc files and related generated code we use i
 
 ### Changelog
 
+#### v1.1.1
+
+* Push Notification
+  * Added push notification avsc and java classes
+
 #### v1.0.2
 
 * Events Gateway

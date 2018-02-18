@@ -5,6 +5,7 @@
   "fields": [
     {
       "name": "push_expiry",
+      "default": 0,
       "type": "long"
     },
     {
@@ -29,6 +30,7 @@
     },
     {
       "name": "dry_run",
+      "default": false,
       "type": "boolean"
     }
   ]
