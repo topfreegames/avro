@@ -1,0 +1,32 @@
+{
+  "namespace": "com.tfgco.pushnotification",
+  "type": "record",
+  "name": "PushFeedback",
+  "fields": [
+    {
+      "name": "to",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    },
+    {
+      "name": "metadata",
+      "default": {},
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sent",
+      "type": "boolean"
+    },
+    {
+      "name": "reason",
+      "default": "",
+      "type": "string"
+    }
+  ]
+}

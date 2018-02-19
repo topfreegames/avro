@@ -6,6 +6,11 @@ This package contains the common .avsc files and related generated code we use i
 
 ### Changelog
 
+#### v1.2.0
+
+* Push Notification Feedbacks
+  * Added push notification feedbacks avsc and java classes
+
 #### v1.1.1
 
 * Push Notification
